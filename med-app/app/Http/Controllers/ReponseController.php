@@ -29,7 +29,7 @@ class ReponseController extends Controller
     $reponse->disp=$request->disp;
     $reponse->user_id = Auth::user()->id;
     $reponse->save();
-    return redirect('/pharmacie');
+    return redirect('/profil');
 }
 
 function med_rep(){

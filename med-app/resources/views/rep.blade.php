@@ -16,7 +16,7 @@
   <a href="#" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
+      <small>{{$repp->user->created_at}}</small>
     </div>
     <p class="mb-1">{{$repp->disp}}<br>
 {{$repp->user->nom}}<br>

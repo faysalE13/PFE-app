@@ -28,14 +28,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    function med_valide(){
-    $meds=Rupture::all();
-    return view('pharmacie')->with("rupture",$meds);
-}
+    
 
-function med_rep_four(){
-    $reps=Reponse::all();
-    return view('fourni')->with("reponse",$reps);
-}
+
 
 }

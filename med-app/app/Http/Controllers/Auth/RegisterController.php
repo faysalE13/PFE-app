@@ -33,7 +33,7 @@ class RegisterController extends Controller
      */
  
 
-public function redirectTo(){
+/*public function redirectTo(){
     if (Auth::user()->type == "pharmacie"){
         return ('/pharmacie');}
         elseif (Auth::user()->type == "fournisseur")
@@ -43,9 +43,9 @@ public function redirectTo(){
             return ('/acceuil');
         }
     }
+*/
 
-
-   // protected $redirectTo = '/pharmacie';
+protected $redirectTo = '/profil';
 
     /**
      * Create a new controller instance.
@@ -96,81 +96,6 @@ public function redirectTo(){
         ]);
     }
 
-function edit($id){
-    $use=User::find($id);
-    return view('edit',['pro'=>$use]);
 
-
-    }
-function updat(Request $request , $id){
-
-
-    $this->validate($request, [
-            'nom' => 'required',
-            'prenom' => 'required',
-            'email' => 'required',
-            'type' => 'required',
-            'position' => 'required',
-            'phon' => 'required',
-
-        ]);
-    $user=User::find($id);
-    //$user->nom = $request->get('nom');
-    $user->prenom = $request->get('prenom');
-    $user->email = $request->get('email');
-    $user->type = $request->get('type');
-    $user->position = $request->get('position');
-    $user->phon = $request->get('phon');
-    $user->save();
-    return response()->json([
-            'error' => false,
-            'products'  => $user,
-        ], 200);
-    
-
-     }
-
-
- /*public function edit(User $user)
-    {   
-        $user = Auth::user();
-        return view('edit', compact('user'));
-    }
-
-    public function update(User $user,Request $request)
-    { 
-        $user = Auth::user();
-        $this->validate(request(), [
-            'nom' => ['required', 'string', 'max:255'],
-            'prenom' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'type' => ['required', 'string', 'max:255'],
-            'position' => ['required', 'string', 'max:255'],
-            'phon' => ['required', 'string', 'max:255'],
-
-        ]);
-        
-           $user-> nom = $data['nom'];
-           $user-> prenom = $data['prenom'];
-           $user-> email = $data['email'];
-           $user-> type = $data['type'];
-           $user-> position = $data['position'];
-           $user-> phon = $data['phon'];
-        $user->save();
-
-       /* $user->nom=$request->nom;
-        $user->prenom=$request->prenom;
-        $user->email=$request->email;
-        $user->type=$request->type;
-        $user->position=$request->position;
-        $user->phon=$request->phon;
-        $user->save();
-
-    return redirect('/liste_pharmacie');
-    }*/
-function show(){
-     $profil=User::where('id',Auth::user()->id)->get();
-    return view('liste_pharmacie')->with("prof",$profil);
-}
     
 }

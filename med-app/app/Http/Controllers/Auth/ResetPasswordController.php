@@ -27,7 +27,7 @@ class ResetPasswordController extends Controller
      */
 
 
-public function redirectTo(){
+/*public function redirectTo(){
     if (Auth::user()->type == "pharmacie"){
         return ('/pharmacie');}
         elseif (Auth::user()->type == "fournisseur")
@@ -36,10 +36,10 @@ public function redirectTo(){
         }else{
             return ('/acceuil');
         }
-    }
+    }*/
 
     
-    //protected $redirectTo = '/home';
+    protected $redirectTo = '/profil';
 
     /**
      * Create a new controller instance.

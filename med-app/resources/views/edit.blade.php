@@ -17,7 +17,7 @@
                             <label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ $pro->nom }}" required autocomplete="nom" autofocus>
+                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ $user->nom }}" required autocomplete="nom" autofocus>
 
                                 @error('nom')
                                     <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                             <label for="prenom" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ $pro->prenom }}" required autocomplete="prenom" autofocus>
+                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ $user->prenom }}" required autocomplete="prenom" autofocus>
 
                                 @error('prenom')
                                     <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                                   <div class="input-group-prepend">
                                      <span class="input-group-text" id="inputGroupPrepend">@</span>
                                    </div>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $pro->email }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                             <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
 
                             <div class="col-md-6">
-                                 <input type="text" maxlength="50" class="form-control" name="position" placeholder="Your city.." value="{{ $pro->position }}" id="validationCustom03" required>
+                                 <input type="text" maxlength="50" class="form-control" name="position" placeholder="Your city.." value="{{ $user->position }}" id="validationCustom03" required>
 
                                 @error('position')
                                     <span class="invalid-feedback" role="alert">
@@ -114,7 +114,7 @@
                                   <div class="input-group-prepend">
                                      <span class="input-group-text" id="inputGroupPrepend">+213</span>
                                    </div>
-                                <input id="phon" type="tel" class="form-control @error('phon') is-invalid @enderror" name="phon" value="{{ $pro->phon }}" required autocomplete="phon">
+                                <input id="phon" type="tel" class="form-control @error('phon') is-invalid @enderror" name="phon" value="{{ $user->phon }}" required autocomplete="phon">
 
                                 @error('phon')
                                     <span class="invalid-feedback" role="alert">

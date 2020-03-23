@@ -22,14 +22,9 @@ class accueilController extends Controller
      function acc(){
          return view ('accueil');
 }
-      
-     function four(){
-         return view ('fourni');
-}
-     function formu(){
-         return view ('form');
-}
-     function repo(){
-         return view ('rep');
-}
+   function pp(){
+         return view ('pppp');
+}   
+  
+ 
 }

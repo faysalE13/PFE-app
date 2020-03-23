@@ -25,18 +25,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    public function redirectTo(){
-    if (Auth::user()->type == "pharmacie"){
-        return ('/pharmacie');}
-        elseif (Auth::user()->type == "fournisseur")
-         {
-            return ('/fourni');
-        }else{
-            return ('/acceuil');
-        }
-    }
+  
 
-    //protected $redirectTo = '/pharmacie';
+    protected $redirectTo = '/profil';
 
     /**
      * Create a new controller instance.

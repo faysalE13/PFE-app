@@ -11,21 +11,23 @@
 |
 */
 
-Route::get('/', function () { 
+/*Route::get('/', function () { 
     return view('welcome');
-});
-Route::get('/accueil' , 'accueilController@acc');
-Route::get('/fourni' , 'HomeController@med_rep_four');
+});*/
+//Route::get('/pharmacie' , 'UserController@med_valide');
+//Route::get('/fourni' , 'HomeController@med_rep_four');
+
+
+
+Route::get('/' , 'accueilController@acc');
+Route::get('/p' , 'accueilController@pp');
+
 Route::get('/rep' , 'ReponseController@med_rep');
-Route::get('/pharmacie' , 'HomeController@med_valide');
-
-
-Route::get('/liste_pharmacie','Auth\RegisterController@show');
-Route::get('/modif/{id}/edit','Auth\RegisterController@edit');
-
+Route::get('/profil','UserController@show');
+Route::get('/modif/edit','UserController@edit');
 Route::get('/form' , 'accueilController@formu');
 
-Route::put('/up/{id}','Auth\RegisterController@updat');
+Route::put('/up/{id}','UserController@update');
 
 Route::post('/form/1','ProfilController@store');
 Route::post('/accueil/rup','RuptureController@store');
