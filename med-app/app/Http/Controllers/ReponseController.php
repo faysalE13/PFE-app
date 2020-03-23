@@ -20,7 +20,7 @@ class ReponseController extends Controller
     }
 
 
-     function store(Request $request){
+    function store(Request $request){
     $request->validate([
     'disp' => 'required|max:50',
     
@@ -36,5 +36,6 @@ function med_rep(){
     $reps=Reponse::all();
     return view('rep')->with("reponse",$reps);
 }
+
 
 }

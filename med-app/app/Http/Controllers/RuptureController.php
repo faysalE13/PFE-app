@@ -18,7 +18,7 @@ class RuptureController extends Controller
         //
     }
 
-   
+  
 
     function store(Request $request){
     $request->validate([
@@ -30,9 +30,6 @@ class RuptureController extends Controller
     return redirect('/rep');
 }
 
- function med_valide(){
-    $meds=Rupture::all();
-    return view('pharmacie')->with("rupture",$meds);
-}
+
 
 }

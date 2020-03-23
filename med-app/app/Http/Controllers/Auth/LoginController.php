@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -25,7 +25,18 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/pharmacie';
+    public function redirectTo(){
+    if (Auth::user()->type == "pharmacie"){
+        return ('/pharmacie');}
+        elseif (Auth::user()->type == "fournisseur")
+         {
+            return ('/fourni');
+        }else{
+            return ('/acceuil');
+        }
+    }
+
+    //protected $redirectTo = '/pharmacie';
 
     /**
      * Create a new controller instance.

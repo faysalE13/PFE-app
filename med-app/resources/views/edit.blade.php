@@ -8,14 +8,16 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="/up/{id}">
+                            <input type="hidden" name="_method" value="PUT">
+
                         @csrf
 
                         <div class="form-group row">
                             <label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
+                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ $pro->nom }}" required autocomplete="nom" autofocus>
 
                                 @error('nom')
                                     <span class="invalid-feedback" role="alert">
@@ -31,7 +33,7 @@
                             <label for="prenom" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
+                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ $pro->prenom }}" required autocomplete="prenom" autofocus>
 
                                 @error('prenom')
                                     <span class="invalid-feedback" role="alert">
@@ -49,7 +51,7 @@
                                   <div class="input-group-prepend">
                                      <span class="input-group-text" id="inputGroupPrepend">@</span>
                                    </div>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $pro->email }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -59,29 +61,7 @@
                             </div>    
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-
+                       
 
 
 
@@ -114,7 +94,7 @@
                             <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
 
                             <div class="col-md-6">
-                                 <input type="text" maxlength="50" class="form-control" name="position" placeholder="Your city.." value="{{old('position')}}" id="validationCustom03" required>
+                                 <input type="text" maxlength="50" class="form-control" name="position" placeholder="Your city.." value="{{ $pro->position }}" id="validationCustom03" required>
 
                                 @error('position')
                                     <span class="invalid-feedback" role="alert">
@@ -134,7 +114,7 @@
                                   <div class="input-group-prepend">
                                      <span class="input-group-text" id="inputGroupPrepend">+213</span>
                                    </div>
-                                <input id="phon" type="tel" class="form-control @error('phon') is-invalid @enderror" name="phon" value="{{ old('phon') }}" required autocomplete="phon">
+                                <input id="phon" type="tel" class="form-control @error('phon') is-invalid @enderror" name="phon" value="{{ $pro->phon }}" required autocomplete="phon">
 
                                 @error('phon')
                                     <span class="invalid-feedback" role="alert">
@@ -146,7 +126,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-danger">
                                     {{ __('Register') }}
                                 </button>
                             </div>

@@ -25,7 +25,21 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+
+public function redirectTo(){
+    if (Auth::user()->type == "pharmacie"){
+        return ('/pharmacie');}
+        elseif (Auth::user()->type == "fournisseur")
+         {
+            return ('/fourni');
+        }else{
+            return ('/acceuil');
+        }
+    }
+
+    
+    //protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.

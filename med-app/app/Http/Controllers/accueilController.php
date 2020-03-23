@@ -18,12 +18,11 @@ class accueilController extends Controller
     }
 
 
+
      function acc(){
          return view ('accueil');
 }
-      function phar(){
-         return view ('pharmacie');
-}
+      
      function four(){
          return view ('fourni');
 }

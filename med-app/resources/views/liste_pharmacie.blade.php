@@ -93,11 +93,11 @@ input[type=submit]:hover {
     <th>Email</th>
   </tr>
   
-     @foreach($profil as $pro )
+     @foreach($prof as $pro )
      <tr>
     <td>{{$pro->nom}}</td>
     <td>{{$pro->prenom}}</td>
-    <td>{{$pro->email}} <a href="/liste_pharmacie" class="btn btn-success">modifier</a>
+    <td>{{$pro->email}} <a href="{{ url('modif/'.$pro->id.'/edit')}}" class="btn btn-success">modifier</a>
 </td>
   </tr>
     @endforeach

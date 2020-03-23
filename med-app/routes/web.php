@@ -15,16 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/accueil' , 'accueilController@acc');
-Route::get('/pharmacie' , 'RuptureController@med_valide');
-Route::get('/fourni' , 'accueilController@four');
+Route::get('/fourni' , 'HomeController@med_rep_four');
 Route::get('/rep' , 'ReponseController@med_rep');
+Route::get('/pharmacie' , 'HomeController@med_valide');
+
+
+Route::get('/liste_pharmacie','Auth\RegisterController@show');
+Route::get('/modif/{id}/edit','Auth\RegisterController@edit');
+
 Route::get('/form' , 'accueilController@formu');
-Route::get('/pharmacie' , 'RuptureController@med_valide');
+
+Route::put('/up/{id}','Auth\RegisterController@updat');
 
 Route::post('/form/1','ProfilController@store');
 Route::post('/accueil/rup','RuptureController@store');
 Route::post('/reponse','ReponseController@store');
-Route::get('/liste_pharmacie','ProfilController@liste_pharmacies');
 
 Auth::routes();
 
