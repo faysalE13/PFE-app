@@ -20,7 +20,6 @@
 
 
 Route::get('/' , 'accueilController@acc');
-Route::get('/p' , 'accueilController@pp');
 
 Route::get('/rep' , 'ReponseController@med_rep');
 Route::get('/profil','UserController@show');

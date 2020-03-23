@@ -22,9 +22,6 @@ class accueilController extends Controller
      function acc(){
          return view ('accueil');
 }
-   function pp(){
-         return view ('pppp');
-}   
-  
+
  
 }
