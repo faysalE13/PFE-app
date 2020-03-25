@@ -4,48 +4,53 @@
 
 
 
+<br><br>
 
 
-@foreach($reponse as $repp)
-
-@if ($repp->disp == "valid") 
     
+<div class="container-fluid">
 
+<div class="row table-responsive">
+            
+           
+            @foreach($reponse as $repp)
+ 
+            <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Disponobility</th>
+             
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Telephone</th>
+              <th>City</th>
+              <th>Date</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> {{$repp->disp}}</td> 
+              
+              <td>{{$repp->user->nom}}</td> 
+              <td>{{$repp->user->prenom}}</td> 
+              <td>{{$repp->user->phon}}</td> 
+              <td>{{$repp->user->position}}</td> 
+              <td>{{$repp->user->created_at}}</td>    
+            </tr> 
+</tbody>
+        </table>
+             @endforeach
+           
 
-  <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>{{$repp->user->created_at}}</small>
-    </div>
-    <p class="mb-1">{{$repp->disp}}<br>
-{{$repp->user->nom}}<br>
-{{$repp->user->prenom}}<br>
-{{$repp->user->position}}<br>
-{{$repp->user->phon}}
-
-</p>
-    <small>Donec id elit non mi porta.</small>
-  </a>
-
-@else
-
-<a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">{{$repp->disp}}<br>
-{{$repp->user->nom}}<br>
-{{$repp->user->prenom}}<br>
-{{$repp->user->position}}<br>
-{{$repp->user->phon}}
-
-</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
+          </tbody>
+        </table>
+      </div>
+    
 </div>
-@endif
-@endforeach
+
+
+
+
 @endsection
 

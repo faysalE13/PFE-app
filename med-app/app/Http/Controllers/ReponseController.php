@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Reponse;
+use App\Rupture;
 use Auth;
 
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class ReponseController extends Controller
 ]);
     $reponse= new Reponse ;
     $reponse->disp=$request->disp;
-    $reponse->user_id = Auth::user()->id;
+    $reponse->user_id =Auth::user()->id;
+    //$reponse->ruptur_id =Auth::user()->id;
     $reponse->save();
     return redirect('/profil');
 }

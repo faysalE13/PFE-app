@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Rupture;
-
+use Auth;
 use Illuminate\Http\Request;
 
 class RuptureController extends Controller
@@ -26,7 +26,13 @@ class RuptureController extends Controller
 ]);
     $rupture= new Rupture ;
     $rupture->med=$request->med;
+    if (Auth::check()) {
+        # code...
+    
+        $rupture->user_id =Auth::user()->id;}
     $rupture->save();
+    
+
     return redirect('/rep');
 }
 
