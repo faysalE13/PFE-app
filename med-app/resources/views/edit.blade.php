@@ -13,6 +13,7 @@
                             <input type="hidden" name="_method" value="PUT">
 
                         @csrf
+                        
 
                         <div class="form-group row">
                             <label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -71,9 +72,7 @@
 
 
                         
-                       
-
-
+                        
 
            
 

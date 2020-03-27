@@ -18,7 +18,7 @@ class CreatReponseTable extends Migration
             $table->string('disp');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('ruptur_id');
+            $table->unsignedBigInteger('ruptur_id')->nullable();
             $table->foreign('ruptur_id')->references('id')->on('ruptures');
             $table->timestamps();
         });

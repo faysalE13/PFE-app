@@ -20,16 +20,18 @@ class ReponseController extends Controller
         //
     }
 
+    
 
     function store(Request $request){
     $request->validate([
     'disp' => 'required|max:50',
     
 ]);
+    
     $reponse= new Reponse ;
     $reponse->disp=$request->disp;
     $reponse->user_id =Auth::user()->id;
-    //$reponse->ruptur_id =Auth::user()->id;
+    //$reponse->ruptur_id =Rupture::find(1);
     $reponse->save();
     return redirect('/profil');
 }

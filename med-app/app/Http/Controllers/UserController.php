@@ -52,7 +52,7 @@ public function __construct()
             'nom' => ['required', 'string', 'max:255'],
             'prenom' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'type' => ['required', 'string', 'max:255'],
+            
             'position' => ['required', 'string', 'max:255'],
             'phon' => ['required', 'string', 'max:255'],
 
@@ -60,10 +60,11 @@ public function __construct()
              $user->nom=$request->nom;
              $user->prenom=$request->prenom;
              $user->email=$request->email;
-             $user->type=$request->type;
              $user->position=$request->position;
              $user->phon=$request->phon;
              $user->save();
+             $request->session()->flash('success','vous avez bien modiffier');
+
             return redirect('/profil');
         }else{
             return redirect()->back();
@@ -72,6 +73,7 @@ public function __construct()
 
     return redirect('/liste_pharmacie');
     }
+
 function show(){
 
     if (Auth::user()->type == "pharmacie") {

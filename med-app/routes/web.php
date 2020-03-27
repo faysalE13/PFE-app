@@ -25,13 +25,20 @@ Route::get('/rep' , 'ReponseController@med_rep');
 Route::get('/profil','UserController@show');
 Route::get('/modif/edit','UserController@edit');
 Route::get('/form' , 'accueilController@formu');
+Route::get('/ajout' , 'MedicamentController@ajouter');
+Route::get('/liste' , 'MedicamentController@show');
+Route::get('/profil/med' , 'MedicamentController@sho');
+Route::get('/edit/{id}/med' , 'MedicamentController@edit');
+
+
 
 Route::put('/up/{id}','UserController@update');
+Route::put('/up/med/{id}','MedicamentController@update');
 
-Route::post('/form/1','ProfilController@store');
+Route::post('/form/1','ProfilController@store');  
 Route::post('/accueil/rup','RuptureController@store');
 Route::post('/reponse','ReponseController@store');
-
+Route::post('/ajout/med','MedicamentController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
