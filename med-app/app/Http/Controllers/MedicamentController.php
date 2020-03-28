@@ -62,9 +62,9 @@ class MedicamentController extends Controller
 
  public function edit($id)
     {   
-        
+        if (Auth::check() && (Auth::user()->type == "pharmacie")){
         $medicame =Medicament::find($id);
-        return view('edit_med', compact('medicame'));
+        return view('edit_med', compact('medicame'));}
     }
 
     public function update(Request $request , $id)
@@ -100,16 +100,15 @@ class MedicamentController extends Controller
 
 
 function show(){
-
     $medicame=Medicament::all();
     return view('list_med')->with("med",$medicame);
-
-
 }
+
+
 function sho(){
     if (Auth::user()->type == "pharmacie"){
    $medicame=Medicament::where('user_id',Auth::user()->id)->get();
-    return view('profil_med')->with("med",$medicame);}
+   return view('profil_med')->with("med",$medicame);}
 }
 
 

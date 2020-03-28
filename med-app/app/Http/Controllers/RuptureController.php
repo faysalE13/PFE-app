@@ -27,8 +27,7 @@ class RuptureController extends Controller
     $rupture= new Rupture ;
     $rupture->med=$request->med;
     if (Auth::check()) {
-        # code...
-    
+        
         $rupture->user_id =Auth::user()->id;}
     $rupture->save();
     

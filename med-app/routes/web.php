@@ -21,7 +21,7 @@
 
 Route::get('/' , 'accueilController@acc');
 
-Route::get('/rep' , 'ReponseController@med_rep');
+Route::get('/rep' , 'accueilController@med_rep');
 Route::get('/profil','UserController@show');
 Route::get('/modif/edit','UserController@edit');
 Route::get('/form' , 'accueilController@formu');
@@ -29,6 +29,9 @@ Route::get('/ajout' , 'MedicamentController@ajouter');
 Route::get('/liste' , 'MedicamentController@show');
 Route::get('/profil/med' , 'MedicamentController@sho');
 Route::get('/edit/{id}/med' , 'MedicamentController@edit');
+Route::get('/rep/edit/{id}','ReponseController@edit');
+
+Route::post('/rep/{id}','ReponseController@store');
 
 
 

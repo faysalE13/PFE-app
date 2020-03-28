@@ -12,8 +12,9 @@ class Reponse extends Model
     function user(){
     	return $this->belongsTo('App\User');
     }
+    
 function ruptur(){
-    	return $this->belongsTo('App\Rupture','ruptur_id');
+    	return $this->belongsTo('App\Rupture');
     }
      
 }

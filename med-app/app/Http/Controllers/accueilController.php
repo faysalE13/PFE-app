@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Reponse;
 use Illuminate\Http\Request;
 
 class accueilController extends Controller
@@ -21,6 +21,14 @@ class accueilController extends Controller
 
      function acc(){
          return view ('accueil');
+}
+
+function med_rep(){
+    $reps=Reponse::all();
+    
+        return view('rep')->with("reponse",$reps);
+    
+    
 }
 
  

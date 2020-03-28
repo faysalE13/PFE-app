@@ -19,27 +19,36 @@ class ReponseController extends Controller
     {
         //
     }
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-    
+    public function edit($id)
+    {   
+        if (Auth::check() && (Auth::user()->type == "pharmacie")){
+        
+        $rupture=Rupture::find($id);
+        return view('edit_reponse', compact('rupture'));
+        }
+    }
 
-    function store(Request $request){
+    function store(Request $request,$id){
     $request->validate([
     'disp' => 'required|max:50',
     
 ]);
     
     $reponse= new Reponse ;
+    $rupture=Rupture::find($id);      
     $reponse->disp=$request->disp;
     $reponse->user_id =Auth::user()->id;
-    //$reponse->ruptur_id =Rupture::find(1);
+    $reponse->ruptur_id =$rupture->id;
     $reponse->save();
+
     return redirect('/profil');
 }
 
-function med_rep(){
-    $reps=Reponse::all();
-    return view('rep')->with("reponse",$reps);
-}
 
 
 }

@@ -16,6 +16,7 @@ class CreateRuptureTable extends Migration
         Schema::create('ruptures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('med');
+            $table->string('disp')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

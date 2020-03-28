@@ -11,11 +11,6 @@
   <label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('Filtre par wilaya') }}</label>
 <select id="wilaya" onchange="myFunction()" class=" col-sm-2 form-control selectpicker " required >
    <option selected >Touts wilaya</option>
-
-
-
-
-
   <option id="Adrar" >Adrar</option>
   <option id="Chlef" >Chlef</option>
   <option id="Laghouat" >Laghouat</option>
@@ -61,7 +56,7 @@
   <option id="Mila" >Mila</option>
   <option id="Aïn Defla" >Aïn Defla</option>
   <option id="Naâma" >Naâma</option>
-  <option id="Aïn Témouchent" >Aïn Témouchent</option>
+  <option id="Aïn Témouchent" >Ain Temouchent</option>
   <option id="Ghardaïa" >Ghardaïa</option>
   <option id="Relizane" >Relizane</option>
   
@@ -96,7 +91,7 @@
           <tbody>
             <tr id="">
               <td id="td"> {{$repp->disp}}</td> 
-              
+              <td id="td"> {{$repp->ruptur->med}}</td> 
               <td id="td">{{$repp->user->nom}}</td> 
               <td id="td">{{$repp->user->prenom}}</td> 
               <td id="td">{{$repp->user->phon}}</td> 

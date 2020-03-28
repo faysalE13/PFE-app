@@ -124,7 +124,7 @@
       <form method="POST" action="/reponse" >
                         @csrf
             <h1 class="h2">liste de recherches</h1>
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-sm" id="myTable">
           <thead>
             <tr>
               <th>#</th>
@@ -137,10 +137,11 @@
           <tbody>
             @foreach($rup as $medd )
             <tr>
+             
+              <td>{{$medd->id}}</td>
               <td>{{$medd->med}}</td>
               <td>{{$medd->created_at}}</td>
-              <td><input type="submit" class="btn btn-success" value="valid" name="disp"></td>
-              <td><input type="submit" class="btn btn-success" value="non_valid" name="disp"></td>    
+              <td><a href="{{ url('rep/edit/'. $medd->id )}}" class="btn btn-success btn-block">modifier medicament</a></td>    
             </tr>
             @endforeach
             </form>
@@ -160,17 +161,19 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($reponse as $repp)
+                      @foreach($reponse as $repon)
 
-            @if ($repp->disp == "non_valid")
+            @if ($repon->disp == "non_valid")
             <tr>
-              <td> {{$repp->disp}}</td> 
-              <td>{{$repp->user->nom}}</td> 
-              <td>{{$repp->user->prenom}}</td> 
-              <td>{{$repp->user->phon}}</td> 
-              <td>{{$repp->user->position}}</td> 
-              <td>{{$repp->user->created_at}}</td>    
-            </tr> 
+              <td> {{$repon->disp}}</td> 
+              <td >{{$repon->ruptur->med}}</td> 
+              <td >{{$repon->user->nom}}</td> 
+              <td >{{$repon->user->prenom}}</td> 
+              <td >{{$repon->user->phon}}</td> 
+              <td >{{$repon->user->position}}</td> 
+              <td >{{$repon->user->created_at}}</td>    
+           
+              </tr> 
             @endif
             @endforeach
           </tbody>
