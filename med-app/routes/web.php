@@ -31,6 +31,7 @@ Route::get('/profil/med' , 'MedicamentController@sho');
 Route::get('/edit/{id}/med' , 'MedicamentController@edit');
 Route::get('/rep/edit/{id}','ReponseController@edit');
 
+
 Route::post('/rep/{id}','ReponseController@store');
 
 

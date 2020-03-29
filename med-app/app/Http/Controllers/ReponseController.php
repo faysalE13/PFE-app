@@ -29,7 +29,7 @@ class ReponseController extends Controller
         if (Auth::check() && (Auth::user()->type == "pharmacie")){
         
         $rupture=Rupture::find($id);
-        return view('edit_reponse', compact('rupture'));
+        return view('edit_reponse');
         }
     }
 

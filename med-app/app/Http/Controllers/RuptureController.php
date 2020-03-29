@@ -34,7 +34,13 @@ class RuptureController extends Controller
 
     return redirect('/rep');
 }
-
+function med_rep(){
+    
+    $ruu=Rupture::all();
+        return view('rep');
+    
+    
+}
 
 
 }

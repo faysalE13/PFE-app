@@ -17,8 +17,15 @@
                 position: relative;
             }
             
+.body {
+    
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: static;
 
-          
+}
+
+         
 
 
             
@@ -42,6 +49,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm">
             <div class="container" >

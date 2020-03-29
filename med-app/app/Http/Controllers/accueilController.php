@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Reponse;
+use App\Rupture;
 use Illuminate\Http\Request;
 
 class accueilController extends Controller
@@ -25,8 +26,9 @@ class accueilController extends Controller
 
 function med_rep(){
     $reps=Reponse::all();
+    $ruu=Rupture::all();
     
-        return view('rep')->with("reponse",$reps);
+        return view('rep')->with("reponse",$reps)->with("ruup",$ruu);
     
     
 }
