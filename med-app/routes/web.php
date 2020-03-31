@@ -30,6 +30,9 @@ Route::get('/liste' , 'MedicamentController@show');
 Route::get('/profil/med' , 'MedicamentController@sho');
 Route::get('/edit/{id}/med' , 'MedicamentController@edit');
 Route::get('/rep/edit/{id}','ReponseController@edit');
+Route::get('/profil/historique','ReponseController@historiq');
+Route::get('/profil/liste/recherche','ReponseController@liste_recherch');
+
 
 
 Route::post('/rep/{id}','ReponseController@store');

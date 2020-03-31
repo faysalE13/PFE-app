@@ -17,11 +17,9 @@
                 position: relative;
             }
             
-.body {
+body {
     
-        background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: static;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(eee.jpg);"
 
 }
 
@@ -51,9 +49,10 @@
 <body>
 
     <div id="app">
-        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm" >
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-1hy7qas"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     {{ __('MED-DZ') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

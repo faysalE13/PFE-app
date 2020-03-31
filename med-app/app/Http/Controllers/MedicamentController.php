@@ -20,7 +20,10 @@ class MedicamentController extends Controller
     function ajouter(){
         return view('ajout_med');
     }
-
+public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     function store(Request $request){
          $medicament= new Medicament ;

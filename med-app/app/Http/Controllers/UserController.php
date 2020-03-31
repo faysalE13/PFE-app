@@ -75,20 +75,23 @@ public function __construct()
     }
 
 function show(){
-
+    $profil=User::where('id',Auth::user()->id)->get();
+     $meds=Rupture::all();
+     $reps=Reponse::all();
     if (Auth::user()->type == "pharmacie") {
         
-    
-     $profil=User::where('id',Auth::user()->id)->get();
-     $meds=Rupture::all();
-     return view('pharmacie')->with("prof",$profil)->with("rup",$meds);
+     $reps=Reponse::where('user_id',Auth::user()->id)->get();
+     
+
+     
+
+     return view('pharmacie')->with("prof",$profil)->with("rup",$meds)->with("reponse",$reps);
 
     }
-    elseif (Auth::user()->type == "fournisseur") {
+    elseif (Auth::user()->type == "fournisseur" || Auth::user()->type == "patient") {
 
-          $profil=User::where('id',Auth::user()->id)->get();
-          $reps=Reponse::all();
-          return view('pharmacie')->with("prof",$profil)->with("reponse",$reps);
+          
+          return view('pharmacie')->with("prof",$profil)->with("reponse",$reps)->with("rup",$meds);
           }
 
 }

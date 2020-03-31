@@ -29,7 +29,7 @@ class ReponseController extends Controller
         if (Auth::check() && (Auth::user()->type == "pharmacie")){
         
         $rupture=Rupture::find($id);
-        return view('edit_reponse');
+        return view('edit_reponse',compact('rupture'));
         }
     }
 
@@ -47,6 +47,15 @@ class ReponseController extends Controller
     $reponse->save();
 
     return redirect('/profil');
+}
+function historiq(){
+    $reps=Reponse::all();
+    $hist=Rupture::where('user_id',Auth::user()->id)->get();
+    return view('historique')->with("histo",$hist)->with("reponse",$reps);;
+}
+function liste_recherch(){
+    $repons=Reponse::all();
+    return view('liste_recherche')->with('repon',$repons);
 }
 
 
