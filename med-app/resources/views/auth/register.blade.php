@@ -118,7 +118,58 @@
                                    <div class="input-group-prepend ">
                                      <span class="input-group-text" id="inputGroupPrepend"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
                                    </div>
-                                 <input type="text" maxlength="50" class="form-control" name="position" placeholder="Your city.." value="{{old('position')}}" id="validationCustom03" required>
+                                <select id="position" name="position" class=" col-sm-12 form-control selectpicker " required >
+   <option></option>                                 
+  <option value="Adrar" >Adrar</option>
+  <option value="Chlef" >Chlef</option>
+  <option value="Laghouat" >Laghouat</option>
+  <option value="Oum El Bouaghi" >Oum El Bouaghi</option>
+  <option value="Batna" >Batna</option>
+  <option value="Béjaïa" >Béjaïa</option>
+  <option value="Biskra" >Biskra</option>
+  <option value="Béchar" >Béchar</option>
+  <option value="Blida" >Blida</option>
+  <option value="Bouira" >Bouira</option>
+  <option value="Tamanrasset" >Tamanrasset</option>
+  <option value="Tébessa" >Tébessa</option>
+  <option value="Tlemcen" >Tlemcen</option>
+  <option value="Tiaret" >Tiaret</option>
+  <option value="Tizi Ouzou" >Tizi Ouzou</option>
+  <option value="Alger" >Alger</option>
+  <option value="Djelfa" >Djelfa</option>
+  <option value="Jijel" >Jijel</option>
+  <option value="Sétif" >Sétif</option>
+  <option value="Saïda" >Saïda</option>
+  <option value="Skikda" >Skikda</option>
+  <option value="Sidi Bel Abbès" >Sidi Bel Abbès</option>
+  <option value="Annaba" >Annaba</option>
+  <option value="Guelma" >Guelma</option>
+  <option value="Constantine" >Constantine</option>
+  <option value="Médéa" >Médéa</option>
+  <option value="Mostaganem" >Mostaganem</option>
+  <option value="M'Sila" >M'Sila</option>
+  <option value="Mascara" >Mascara</option>
+  <option value="Ouargla" >Ouargla</option>
+  <option value="Oran" >Oran</option>
+  <option value="El Bayadh" >El Bayadh</option>
+  <option value="Illizi" >Illizi</option>
+  <option value="Bordj Bou Arreridj" >Bordj Bou Arreridj</option>
+  <option value="Boumerdès" >Boumerdès</option>
+  <option value="El Tarf" >El Tarf</option>
+  <option value="Tindouf" >Tindouf</option>
+  <option value="Tissemsilt" >Tissemsilt</option>
+  <option value="El Oued" >El Oued</option>
+  <option value="Khenchela" >Khenchela</option>
+  <option value="Souk Ahras" >Souk Ahras</option>
+  <option value="Tipaza" >Tipaza</option>
+  <option value="Mila" >Mila</option>
+  <option value="Aïn Defla" >Aïn Defla</option>
+  <option value="Naâma" >Naâma</option>
+  <option value="Aïn Témouchent" >Ain Temouchent</option>
+  <option value="Ghardaïa" >Ghardaïa</option>
+  <option value="Relizane" >Relizane</option>
+  
+</select>
 
                                 @error('position')
                                     <span class="invalid-feedback" role="alert">

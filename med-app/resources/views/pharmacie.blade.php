@@ -16,12 +16,14 @@
 
 <div class="container-fluid" >
   <div class="row" >
-    <nav class="d-none d-md-block navbar-dark sidebar bg-info rounded position-fixed" >
-      <div class="sidebar-sticky" >
-
+    <nav class="d-none d-md-block navbar-dark sidebar bg-dark rounded position-fixed" style="
+    height: 100%;
+  position: fixed;
+overflow-x: hidden;">
+      <div class="sidebar-sticky " >
+<br><br>
         @foreach($prof as $pro )
         <ul class="nav flex-column ">
-          <br><br>
           <li class="nav-item ">
             <a class="navbar-brand " href="/profil">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -56,11 +58,11 @@
             &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>&nbsp;&nbsp; City:  {{$pro->position}}
           </a>
         </li>
-        <br>
+        
         <li>
-          <a href="{{ url('modif/edit')}}" class="btn btn-success" style="margin-left: 30%;">modifier profile</a>
+          <a href="#" class=""><hr class="bg-white "></a>
         </li>
-           <br>
+           
           <li class="nav-item">
            &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -103,9 +105,7 @@
               Ajouter un medicament
             </a>
           </li>
-          <br><br><br>
-          @else
-          <br><br><br><br><br>
+          
           @endif
           
           
@@ -142,8 +142,8 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Nom</th>
-              <th>Date</th>
+              <th>Nom/DCI/CODE</th>
+              <th>Date de recherche</th>
               <th></th>
               
             </tr>
@@ -243,13 +243,15 @@
             <table class="table table-striped table-sm" id="tab">
           <thead>
             <tr>
-              <th>Disponobility</th>
               <th>Nom</th>
               <th>Prenom</th>
+              <th>Nom/DCI/CODE</th>
+              <th>Disponobility</th>         
               <th>Telephone</th>
+              <th>Ville</th>
               <th>City</th>
-              <th>Date</th>
-              <th>Date</th>
+              <th>Date de recherche</th>
+              <th>Date de repons</th>
               
             </tr>
           </thead>
@@ -258,13 +260,16 @@
 
             @if ($repon->disp == "non_valid")
             <tr>
-              <td> {{$repon->disp}}</td> 
-              <td >{{$repon->ruptur->med}}</td> 
+              
               <td >{{$repon->user->nom}}</td> 
               <td >{{$repon->user->prenom}}</td> 
+              <td >{{$repon->ruptur->med}}</td> 
+              <td >{{$repon->disp}}</td>
               <td >{{$repon->user->phon}}</td> 
               <td >{{$repon->user->position}}</td> 
-              <td >{{$repon->user->created_at}}</td>    
+              <td ></td> 
+              <td >{{$repon->ruptur->created_at}}</td> 
+              <td >{{$repon->created_at}}</td>  
            
               </tr> 
             @endif
