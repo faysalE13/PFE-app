@@ -16,15 +16,15 @@
 
 <div class="container-fluid" >
   <div class="row" >
-    <div class="   d-none d-md-block navbar-light sidebar bg-white shadow-sm rounded position-fixed" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.9) 100%), url(logo.jpg);">
+    <nav class="d-none d-md-block navbar-dark sidebar bg-info rounded position-fixed" >
       <div class="sidebar-sticky" >
 
         @foreach($prof as $pro )
         <ul class="nav flex-column ">
-          <br><br><br>
+          <br><br>
           <li class="nav-item ">
             <a class="navbar-brand " href="/profil">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                    &nbsp;&nbsp;&nbsp;&nbsp;   Mon Profile
             </a>
           </li>
@@ -54,24 +54,27 @@
             <a class="navbar-brand" href="#">
               
             &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>&nbsp;&nbsp; City:  {{$pro->position}}
-            <br>            
-            <a href="{{ url('modif/edit')}}" class="btn btn-success btn-block">modifier profile</a>
-          </li>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="{{ url('modif/edit')}}" class="btn btn-success" style="margin-left: 30%;">modifier profile</a>
+        </li>
            <br>
           <li class="nav-item">
-            <a class="navbar-brand" href="/">
+           &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             Accueil
             </a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="/profil/liste/recherche">
+           &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/profil/liste/recherche">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               liste de recherche
             </a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="/profil/historique">
+           &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/profil/historique">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
               Hstorique de recherche
             </a>
@@ -79,7 +82,7 @@
           
           
           <li class="nav-item">
-            <a class="navbar-brand" href="/liste">
+           &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/liste">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               liste medicament
             </a>
@@ -89,18 +92,20 @@
            
           
           <li class="nav-item">
-            <a class="navbar-brand" href="/profil/med">
+           &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/profil/med">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               consulter mes medicaments
             </a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="/ajout">
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/ajout">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
               Ajouter un medicament
             </a>
           </li>
           <br><br><br>
+          @else
+          <br><br><br><br><br>
           @endif
           
           
@@ -108,7 +113,7 @@
          </ul>
          @endforeach
       </div>
-    </div>
+    </nav>
 
     <main role="main" class="col-md-9  ml-sm-auto col-lg-9 px-4" >
       <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
@@ -133,14 +138,14 @@
       <form method="POST" action="/reponse" >
                         @csrf
             <h1 class="h2">liste de recherches</h1>
-            <table class="table table-striped table-sm" id="myTable">
+            <table class="table table-striped table-info table-sm" id="myTable">
           <thead>
             <tr>
               <th>#</th>
               <th>Nom</th>
               <th>Date</th>
-              <th>Disponobility</th>
               <th></th>
+              
             </tr>
           </thead>
           <tbody>
@@ -166,7 +171,7 @@
 
 
               <td>{{$medd->created_at}}</td>
-              <td><a href="{{ url('rep/edit/'. $medd->id )}}" class="btn btn-success btn-block">modifier medicament</a></td>    
+              <td><a href="{{ url('rep/edit/'. $medd->id )}}" class="btn btn-info " style="margin-left: 50%;">Repond</a></td>    
             </tr>
             @endif
             @endforeach
@@ -270,48 +275,22 @@
 
         @if($pro->type == "patient")
 
-           <div class="form-row align-items-center" style="margin-left: 65%;" >
-<div class="input-group-prepend">
-<label for="nom" class="col-md-6 col-form-label text-md-right">{{ __('cherch par dci') }}</label>
-<input type="text" id="nom" onkeyup="parnom()" placeholder="Search for names.." title="Type in a name" class="form-control">
+           <div class="flex-center position-ref  container" >
+    <form action="/accueil/rup" method="post">
+      <h1 class="text-center display-3" svg viewBox="0 0 24 24" width="80" height="80" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-1hy7qas"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>MED-DZ...</h1>
+      @csrf
+         <div class="input-group input-group-lg ">
+  <input type="text" name="med" class="form-control shadow-sm " size="40" placeholder=" Chercher par NOM/DCI/CODE...">
+        
+  <div class="input-group-append">
+    <input class="btn btn-primary" type="submit" value="Cherche">
+  </div>
 </div>
-</div>
-<br>
 
-
-            <table class="table table-striped table-sm" id="tab">
-          <thead>
-            <tr>
-              <th>Disponobility</th>
-              <th>Nom</th>
-              <th>Prenom</th>
-              <th>Telephone</th>
-              <th>City</th>
-              <th>Date</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-
-                      @foreach($reponse as $repp)
-                      
-          <tbody>
-            <tr id="">
-              <td id="td">{{$repp->disp}}</td>
-              <td id="td">{{$repp->ruptur->med}}</td>    
-              <td id="td">{{$repp->user->nom}}</td> 
-              <td id="td">{{$repp->user->prenom}}</td> 
-              <td id="td">{{$repp->user->phon}}</td> 
-              <td id="td">{{$repp->user->position}}</td> 
-              <td id="td">{{$repp->user->created_at}}</td>    
-            </tr>
-                     
-
-            
-            @endforeach
-            @endif
-          </tbody>
-        </table>
+    </form>
+    
+</div>            @endif
+          
       </div>
    
 

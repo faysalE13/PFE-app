@@ -22,7 +22,7 @@
 
                         
 
-<table class="table table-striped table-sm" id="myTable">
+<table class="table table-striped table-info table-sm" id="myTable">
           <thead>
             <tr>
               <th>#</th>

@@ -47,7 +47,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0" style="margin-left: 38%;">
                             <div class="col-md-6 offset-md-4">
           
 <input type="submit" class="btn btn-success" value="valid" name="disp">

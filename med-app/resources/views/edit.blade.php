@@ -114,11 +114,15 @@
                             </div>    
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0" style="margin-left: 35%;">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-danger">
-                                    {{ __('Register') }}
+                                    {{ __('Modifier') }}
                                 </button>
+                            
+                                <a class="btn btn-danger" href="/profil">
+                                    {{ __('Annuler') }}
+                                </a>
                             </div>
                         </div>
 
