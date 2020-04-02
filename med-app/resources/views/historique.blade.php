@@ -7,9 +7,9 @@
 <br><br>
 
 
-<div class="row container" style="margin-left:  55%;">
+<div class="row " style="margin-left:  62%;">
   <label for="nom" class="col-md-3 col-form-label text-md-right">{{ __('Filtre par wilaya') }}</label>
-<select id="wilaya" onchange="myFunction()" class=" col-sm-2 form-control selectpicker " required >
+<select id="wilaya" onchange="myFunction()" class=" col-sm-3 form-control " required >
    <option selected >Touts wilaya</option>
   <option id="Adrar" >Adrar</option>
   <option id="Chlef" >Chlef</option>
@@ -76,14 +76,15 @@
             <table class="table table-striped table-sm" id="myTable">
           <thead>
             <tr>
-              <th>Disponobility</th>
-             
               <th>Nom</th>
               <th>Prenom</th>
+              <th>Nom | DCI | CODE</th>
+              <th>Disponobility</th>         
               <th>Telephone</th>
+              <th>Ville</th>
               <th>City</th>
-              <th>Date</th>
-              <th>Date</th>
+              <th>Date de recherche</th>
+              <th>Date de repons</th>
             </tr>
           </thead>
                       @foreach($histo as $his)
@@ -95,13 +96,15 @@
 
           <tbody>
             <tr id="">
-              <td id="td">{{$repp->disp}}</td>
-              <td id="td">{{$repp->ruptur->med}}</td>    
               <td id="td">{{$repp->user->nom}}</td> 
               <td id="td">{{$repp->user->prenom}}</td> 
+              <td id="td">{{$repp->ruptur->med}}</td> 
+              <td id="td">{{$repp->disp}}</td>
               <td id="td">{{$repp->user->phon}}</td> 
               <td id="td">{{$repp->user->position}}</td> 
-              <td id="td">{{$repp->user->created_at}}</td>    
+              <td id="td"></td> 
+              <td id="td">{{$repp->ruptur->created_at}}</td> 
+              <td id="td">{{$repp->created_at}}</td>    
             </tr> 
 
 </tbody>

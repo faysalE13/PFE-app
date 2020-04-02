@@ -12,7 +12,7 @@
   <input type="text" name="med" class="form-control shadow-sm " size="40" placeholder=" Chercher par NOM/DCI/CODE...">
         
   <div class="input-group-append">
-    <input class="btn btn-primary" type="submit" value="Cherche">
+    <input class="btn btn-primary shadow-sm" type="submit" value="Cherche">
   </div>
 </div>
 
@@ -54,7 +54,7 @@
 				<div class="col-md-3 col-sm-6 highlight" style="margin-left: 10%;">
 					<div class="h-caption"><h4 class="text-center"><img src="https://img.icons8.com/ios-glyphs/90/000000/supplier.png"/><br>Fournissuer</h4></div>
 					<div class="h-body text-center">
-						<p>Peut consulter la liste des pharmaies qui on repond par nom, .<br>
+						<p>Peut consulter la liste des pharmaies qui on repond par nom sur un medicament pour livrer ce dernier.<br>
                         Le fournisseur peut aussi consulter la liste des médicaments.</p>
 					</div>
 				</div>
@@ -107,21 +107,15 @@
 			</div>
 		</div>
 
-		<div class="footer2">
-			<div class="container">
-				
-					<div class="col-md-5 widget" style="margin-left: 25%;">
-						<div class="widget-body">
-							<p class="text-right">
-								Copyright &copy; 2020, MED-DZ. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
-							</p>
-						</div>
-					</div>
-
-			</div>
-		</div>
       
 	</footer>	
+
+	<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2020, MED-DZ.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
 </div>
 

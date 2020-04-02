@@ -23,6 +23,7 @@ Route::get('/' , 'accueilController@acc');
 
 Route::get('/rep' , 'accueilController@med_rep');
 Route::get('/profil','UserController@show');
+Route::get('/liste/pharmacie','UserController@show_liste_pharmacie');
 Route::get('/modif/edit','UserController@edit');
 Route::get('/form' , 'accueilController@formu');
 Route::get('/ajout' , 'MedicamentController@ajouter');
@@ -32,6 +33,7 @@ Route::get('/edit/{id}/med' , 'MedicamentController@edit');
 Route::get('/rep/edit/{id}','ReponseController@edit');
 Route::get('/profil/historique','ReponseController@historiq');
 Route::get('/profil/liste/recherche','ReponseController@liste_recherch');
+Route::get('/liste/pharmacie/{id}','UserController@profil_view');
 
 
 

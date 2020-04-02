@@ -76,14 +76,15 @@
             <table class="table table-striped table-sm" id="myTable">
           <thead>
             <tr>
-              <th>Disponobility</th>
-             
               <th>Nom</th>
               <th>Prenom</th>
+              <th>Nom | DCI | CODE</th>
+              <th>Disponobility</th>         
               <th>Telephone</th>
+              <th>Ville</th>
               <th>City</th>
-              <th>Date</th>
-              <th>Date</th>
+              <th>Date de recherche</th>
+              <th>Date de repons</th>
             </tr>
           </thead>
                       
@@ -93,13 +94,15 @@
 
           <tbody>
             <tr id="">
-              <td id="td">{{$repp->disp}}</td>
-              <td id="td">{{$repp->ruptur->med}}</td>    
               <td id="td">{{$repp->user->nom}}</td> 
               <td id="td">{{$repp->user->prenom}}</td> 
+              <td id="td">{{$repp->ruptur->med}}</td> 
+              <td id="td">{{$repp->disp}}</td>
               <td id="td">{{$repp->user->phon}}</td> 
               <td id="td">{{$repp->user->position}}</td> 
-              <td id="td">{{$repp->user->created_at}}</td>    
+              <td id="td"></td> 
+              <td id="td">{{$repp->ruptur->created_at}}</td> 
+              <td id="td">{{$repp->created_at}}</td>   
             </tr> 
 
 </tbody>

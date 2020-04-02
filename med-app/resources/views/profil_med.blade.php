@@ -3,23 +3,24 @@
 @section('content')
 
 <br><br><br>
-<a href="/ajout" class="btn btn-success btn-block">ajouter medicament</a>
 <form>
 <div class="form-row align-items-center" style="" >
 <div class="col-sm-4 my-1">
-<label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('cherch par dci') }}</label>
-<input type="text" id="dci" onkeyup="pardci()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('cherch par dci') }}</label>-->
+<input type="text" id="dci" class="form-control" onkeyup="pardci()" placeholder="cherch par dci.." >
 </div>
 <div class="col-sm-4 my-1">
-<label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('cherch par nom') }}</label>
-<input type="text" id="nom" onkeyup="parnom()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('cherch par nom') }}</label>-->
+<input type="text" id="nom" class="form-control" onkeyup="parnom()" placeholder="Search for namescherch par nom.." >
 </div>
 <div class="col-sm-4 my-1">
-<label for="pys" class="col-md-4 col-form-label text-md-right">{{ __('cherch par pys') }}</label>
-<input type="text" id="pays" onkeyup="parpays()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="pys" class="col-md-4 col-form-label text-md-right">{{ __('cherch par pys') }}</label>-->
+<input type="text" id="pays" class="form-control" onkeyup="parpays()" placeholder="cherch par pays.." >
 </div>
 </div>
 </form>
+<a href="/ajout" class="btn btn-success " style="margin-left: 85%;">ajouter medicament</a>
+
                         @if (session('success'))
                           <div class="alert alert-success" role="alert">
                           {{session('success')}}
@@ -45,7 +46,7 @@
               <th>tarif</th>
               <th>remboursable</th>
               <th>date de creation</th>
-                            
+              <th></th>              
             </tr>
           </thead>
           <tbody>
@@ -129,4 +130,5 @@ function parpays() {
   }
 }
 </script>
+ 
         @endsection

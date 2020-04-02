@@ -42,6 +42,8 @@ public function __construct()
         $user = Auth::user();
         return view('edit', compact('user'));
     }
+    
+    
 
     public function update(Request $request)
     { 
@@ -96,7 +98,16 @@ function show(){
 
 }
 
+function show_liste_pharmacie(){
+        $pharmacies=User::all();
+        return view('liste_pharmacie')->with('pharma',$pharmacies);
 
-
+}
+public function profil_view($id)
+    {   
+        
+        $profils =user::find($id);
+        return view('profil_detail', compact('profils'));
+    }
 
 }

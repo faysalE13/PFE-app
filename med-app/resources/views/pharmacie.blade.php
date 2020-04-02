@@ -142,7 +142,7 @@ overflow-x: hidden;">
           <thead>
             <tr>
               <th>#</th>
-              <th>Nom/DCI/CODE</th>
+              <th>Nom | DCI | CODE</th>
               <th>Date de recherche</th>
               <th></th>
               
@@ -245,7 +245,7 @@ overflow-x: hidden;">
             <tr>
               <th>Nom</th>
               <th>Prenom</th>
-              <th>Nom/DCI/CODE</th>
+              <th>Nom | DCI | CODE</th>
               <th>Disponobility</th>         
               <th>Telephone</th>
               <th>Ville</th>
@@ -280,29 +280,117 @@ overflow-x: hidden;">
 
         @if($pro->type == "patient")
 
-           <div class="flex-center position-ref  container" >
-    <form action="/accueil/rup" method="post">
-      <h1 class="text-center display-3" svg viewBox="0 0 24 24" width="80" height="80" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-1hy7qas"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>MED-DZ...</h1>
-      @csrf
-         <div class="input-group input-group-lg ">
-  <input type="text" name="med" class="form-control shadow-sm " size="40" placeholder=" Chercher par NOM/DCI/CODE...">
-        
-  <div class="input-group-append">
-    <input class="btn btn-primary" type="submit" value="Cherche">
-  </div>
-</div>
+      <header>
 
-    </form>
+    <div id="carouselExampleCaptions" class="carousel slide shadow-sm rounded" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="fug1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-muted font-weight-bold">Recherche sur les médicaments</h5>
+        <p class="text-muted font-weight-bold">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="fug2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-muted font-weight-bold">Consulter les pharmacies</h5>
+        <p class="text-muted font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="fug3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-muted font-weight-bold">Consulter la liste des medicaments</h5>
+        <p class="text-muted font-weight-bold">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">Bienvenue chez MED-DZ</h1>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Signaler une rupture</h4>
+          <div class="card-body">
+            <p class="card-text">Vous pouvez signaler une rupture en saisissant le nom commercial, le code ou le nom DCI du médicament en rupture.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/" class="btn btn-primary">Voire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Liste des pharmaciens</h4>
+          <div class="card-body">
+            <p class="card-text">Vous pouvez consulter la liste des pharmaciens et consulter leur profiles.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/liste/pharmacie" class="btn btn-primary">Voire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Liste des medicaments</h4>
+          <div class="card-body">
+            <p class="card-text">Vous pouvez consulter la liste des medicamens.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/liste" class="btn btn-primary">Voire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
     
-</div>            @endif
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+         
+
+
+  @endif
+
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
           
       </div>
    
-
-
-
-
-
     </main>
   </div>
 </div>

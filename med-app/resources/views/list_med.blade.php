@@ -6,16 +6,16 @@
 <form>
 <div class="form-row align-items-center" style="" >
 <div class="col-sm-4 my-1">
-<label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('cherch par dci') }}</label>
-<input type="text" id="dci" onkeyup="pardci()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('cherch par dci') }}</label>-->
+<input type="text" id="dci" class="form-control" onkeyup="pardci()" placeholder="cherch par dci.." >
 </div>
 <div class="col-sm-4 my-1">
-<label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('cherch par nom') }}</label>
-<input type="text" id="nom" onkeyup="parnom()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('cherch par nom') }}</label>-->
+<input type="text" id="nom" class="form-control" onkeyup="parnom()" placeholder="Search for namescherch par nom.." >
 </div>
 <div class="col-sm-4 my-1">
-<label for="pys" class="col-md-4 col-form-label text-md-right">{{ __('cherch par pys') }}</label>
-<input type="text" id="pays" onkeyup="parpays()" placeholder="Search for names.." title="Type in a name">
+<!--<label for="pys" class="col-md-4 col-form-label text-md-right">{{ __('cherch par pys') }}</label>-->
+<input type="text" id="pays" class="form-control" onkeyup="parpays()" placeholder="cherch par pays.." >
 </div>
 </div>
 </form>
@@ -23,22 +23,24 @@
                         
 
 <table class="table table-striped table-info table-sm" id="myTable">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>dci</th>
-              <th>nom_med</th>
-              <th>form</th>
-              <th>code&nbsp;&nbsp;&nbsp;&nbsp;</th>
-              <th>padosage</th>
-              <th>pays</th>
-              <th>ppa</th>
-              <th>tarif</th>
-              <th>remboursable</th>
-              <th>date de creation</th>
+          <thead >
+            <tr >
+              <th >#</th>
+              <th >DCI</th>
+              <th >Nom commercial</th>
+              <th >Form</th>
+              <th >Code&nbsp;&nbsp;&nbsp;&nbsp;</th>
+              <th >Dosage</th>
+              <th >Pays</th>
+              <th >PPA</th>
+              <th >Tarif</th>
+              <th >Remboursable</th>
+              <th >Date de creation</th>
                             
             </tr>
+
           </thead>
+
           <tbody>
             @foreach($med as $meede)
 
@@ -61,6 +63,7 @@
             @endforeach
           </tbody>
         </table>
+
 
 <script>
 function pardci() {

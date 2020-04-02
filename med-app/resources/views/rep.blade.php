@@ -78,7 +78,7 @@
             <tr>
               <th>Nom</th>
               <th>Prenom</th>
-              <th>Nom/DCI/CODE</th>
+              <th>Nom | DCI | CODE</th>
               <th>Disponobility</th>         
               <th>Telephone</th>
               <th>Ville</th>
@@ -116,8 +116,7 @@
              
            
 
-          </tbody>
-        </table>
+          
       </div>
     
 </div>
