@@ -19,7 +19,7 @@
             
 body {
     
-        background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(eee.jpg);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(back_ground.jpg);
 
 }
 
