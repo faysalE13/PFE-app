@@ -293,21 +293,21 @@ overflow-x: hidden;">
       <img src="fug1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="text-muted font-weight-bold">Recherche sur les médicaments</h5>
-        <p class="text-muted font-weight-bold">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        
       </div>
     </div>
     <div class="carousel-item">
       <img src="fug2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="text-muted font-weight-bold">Consulter les pharmacies</h5>
-        <p class="text-muted font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+       
       </div>
     </div>
     <div class="carousel-item">
       <img src="fug3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="text-muted font-weight-bold">Consulter la liste des medicaments</h5>
-        <p class="text-muted font-weight-bold">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        
       </div>
     </div>
   </div>
