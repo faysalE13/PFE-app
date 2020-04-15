@@ -36,7 +36,7 @@
           <li class="list-inline-item">
            &nbsp;&nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="/profil/historique">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-              Hstorique de recherche
+              Hstorique
             </a>
           </li>
                     
@@ -59,7 +59,8 @@
 
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Information</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    <h5 class="mb-0">Information</h5>
+                    <!-- <a href="#" class="btn btn-link text-muted">Show all</a> -->
                 </div>
                     <form >
                         

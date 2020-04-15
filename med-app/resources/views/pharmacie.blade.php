@@ -174,10 +174,9 @@ overflow-x: hidden;">
               <td><a href="{{ url('rep/edit/'. $medd->id )}}" class="btn btn-info " style="margin-left: 50%;">Repond</a></td>    
             </tr>
             @endif
-            @endforeach
-                     
-            
+            @endforeach      
             </form>
+            
             @elseif($pro->type == "fournisseur")
 
            
@@ -290,23 +289,23 @@ overflow-x: hidden;">
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="fug1.jpg" class="d-block w-100" alt="...">
+      <img src="fug1.jpg" class="d-block w-100" alt="..." >
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="text-muted font-weight-bold">Recherche sur les médicaments</h5>
+       <!-- <h5 class="text-muted font-weight-bold">Recherche sur les médicaments</h5> -->
         
       </div>
     </div>
     <div class="carousel-item">
       <img src="fug2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="text-muted font-weight-bold">Consulter les pharmacies</h5>
+       <!-- <h5 class="text-muted font-weight-bold">Consulter les pharmacies</h5> -->
        
       </div>
     </div>
     <div class="carousel-item">
       <img src="fug3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="text-muted font-weight-bold">Consulter la liste des medicaments</h5>
+       <!-- <h5 class="text-muted font-weight-bold">Consulter la liste des medicaments</h5> -->
         
       </div>
     </div>
@@ -377,17 +376,17 @@ overflow-x: hidden;">
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
          
-
-
-  @endif
-
-
-  <footer class="py-5 bg-dark">
+<footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
     </div>
     <!-- /.container -->
-  </footer>
+  </footer> 
+
+  @endif
+
+
+  
           
       </div>
    
