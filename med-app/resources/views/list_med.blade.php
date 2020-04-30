@@ -11,7 +11,7 @@
 </div>
 <div class="col-sm-4 my-1">
 <!--<label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('cherch par nom') }}</label>-->
-<input type="text" id="nom" class="form-control" onkeyup="parnom()" placeholder="Search for namescherch par nom.." >
+<input type="text" id="nom" class="form-control" onkeyup="parnom()" placeholder="cherch par nom.." >
 </div>
 <div class="col-sm-4 my-1">
 <!--<label for="pys" class="col-md-4 col-form-label text-md-right">{{ __('cherch par pys') }}</label>-->

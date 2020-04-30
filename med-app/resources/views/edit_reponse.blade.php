@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><img src="https://img.icons8.com/ios-glyphs/32/000000/treatment-plan.png"/>&nbsp;&nbsp;&nbsp;&nbsp;{{ __('Ajouter un medicameent') }}</div>
+                <div class="card-header"><img src="https://img.icons8.com/ios-glyphs/32/000000/treatment-plan.png"/>&nbsp;&nbsp;&nbsp;&nbsp;{{ __('Répondre') }}</div>
 
                 <div class="card-body">
                     

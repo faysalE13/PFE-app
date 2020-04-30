@@ -23,7 +23,7 @@
                         
 
                         <div class="form-group row">
-                            <label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('dci') }}</label>
+                            <label for="dci" class="col-md-4 col-form-label text-md-right">{{ __('DCI') }}</label>
 
                             <div class="col-md-6">
                                 <input id="dci" type="text" class="form-control @error('dci') is-invalid @enderror" name="dci" value="" required autocomplete="dci" autofocus>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="nom_med" class="col-md-4 col-form-label text-md-right">{{ __('nom_med') }}</label>
+                            <label for="nom_med" class="col-md-4 col-form-label text-md-right">{{ __('Nom de marque') }}</label>
 
                             <div class="col-md-6">
                                 <input id="nom_med" type="text" class="form-control @error('nom_med') is-invalid @enderror" name="nom_med" value="" required autocomplete="nom_med" autofocus>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="form" class="col-md-4 col-form-label text-md-right">{{ __('form') }}</label>
+                            <label for="form" class="col-md-4 col-form-label text-md-right">{{ __('Form') }}</label>
 
                             <div class="col-md-6">
                                 <input id="form" type="text" class="form-control @error('form') is-invalid @enderror" name="form" value="" required autocomplete="form" autofocus>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('code') }}</label>
+                            <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
 
                             <div class="col-md-6">
                                 <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="" required autocomplete="code" autofocus>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="dosage" class="col-md-4 col-form-label text-md-right">{{ __('dosage') }}</label>
+                            <label for="dosage" class="col-md-4 col-form-label text-md-right">{{ __('Dosage') }}</label>
 
                             <div class="col-md-6">
                                 <input id="dosage" type="text" class="form-control @error('dosage') is-invalid @enderror" name="dosage" value="" required autocomplete="dosage" autofocus>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="pays" class="col-md-4 col-form-label text-md-right">{{ __('pays') }}</label>
+                            <label for="pays" class="col-md-4 col-form-label text-md-right">{{ __('Pays') }}</label>
 
                             <div class="col-md-6">
                                 <input id="pays" type="text" class="form-control @error('pays') is-invalid @enderror" name="pays" value="" required autocomplete="pays" autofocus>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="ppa" class="col-md-4 col-form-label text-md-right">{{ __('ppa') }}</label>
+                            <label for="ppa" class="col-md-4 col-form-label text-md-right">{{ __('PPA') }}</label>
 
                             <div class="col-md-6">
                                 <input id="ppa" type="text" class="form-control @error('ppa') is-invalid @enderror" name="ppa" value="" required autocomplete="ppa" autofocus>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="tarif" class="col-md-4 col-form-label text-md-right">{{ __('tarif') }}</label>
+                            <label for="tarif" class="col-md-4 col-form-label text-md-right">{{ __('Tarif') }}</label>
 
                             <div class="col-md-6">
                                 <input id="tarif" type="text" class="form-control @error('tarif') is-invalid @enderror" name="tarif" value="" required autocomplete="tarif" autofocus>
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="remboursable" class="col-md-4 col-form-label text-md-right">{{ __('remboursable') }}</label>
+                            <label for="remboursable" class="col-md-4 col-form-label text-md-right">{{ __('Remboursable') }}</label>
 
                             <div class="col-md-6">
                                 <input id="remboursable" type="text" class="form-control @error('remboursable') is-invalid @enderror" name="remboursable" value="" required autocomplete="remboursable" autofocus>
