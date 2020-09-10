@@ -99,7 +99,7 @@
 						<div class="widget-body">
 							<p>résoudre un problème que l’on rencontre Souvent quand on cherche un ou plusieurs médicament chez une pharmacie  et on ne le trouve pas, alors on est obligé  de chercher dans plusieurs pharmacies, ce qui consomme du temps, de l'énergie et de l’argent avec de de grave problème en cas d'urgence.</p>
 							<h3 class="widget-title">L'idée</h3>
-							<p>La boite de développement informatique <a href="#">"HDConsulting" </a>à Tlemcen, nous a proposé une solution pour ce problème, cette solution permet de rechercher des médicaments d'une façon automatique et facile à l'aide d'une simple application web qui permet de vérifier où vous pouvez trouver ces médicaments sans perte de temps et d'efforts avec une implication des pharmacies.</p>
+							<p>La boite de développement informatique <a href="https://hdconsulting-dz.com">"HDConsulting" </a>à Tlemcen, nous a proposé une solution pour ce problème, cette solution permet de rechercher des médicaments d'une façon automatique et facile à l'aide d'une simple application web qui permet de vérifier où vous pouvez trouver ces médicaments sans perte de temps et d'efforts avec une implication des pharmacies.</p>
 						</div>
 					</div>
 
