@@ -71,18 +71,15 @@
 			<div class="container">
 				<div class="row">
 					
-					<div class="col-md-3 widget">
+					<div class="col-md-5 widget">
 						<h3 class="widget-title">Contact</h3>
 						<div class="widget-body">
-							<p>+213 797 062 058<br>
+							<p>+213 000 000 000<br>
 								<a href="#">m.hammouti.inf@gmail.com</a><br>
-								<br>
-								////////////////////////////////////////////
+								<a href="#">abennat361@gmail.com</a><br><br><br><br>
 							</p>	
 						</div>
-					</div>
-
-					<div class="col-md-3 widget">
+						<div class="col-md-5 widget">
 						<h3 class="widget-title">Follow me</h3>
 						<div class="widget-body">
 						<p class="follow-me-icons" style="margin-left: 7%;" >
@@ -92,6 +89,9 @@
 
 							</p>	
 						</div>
+					
+					</div>
+
 					</div>
 
 					<div class="col-md-6 widget">
